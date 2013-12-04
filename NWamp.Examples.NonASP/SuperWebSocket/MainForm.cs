@@ -5,9 +5,9 @@ using System.Windows.Forms;
 using System.Net;
 
 using NWamp;
-using NWamp.Alchemy;
+using NWamp.SuperWebSocket;
 
-namespace NWamp.Alchemy.Tester
+namespace NWamp.SuperWebSocket.Tester
 {
 	/// <summary>
 	/// Description of MainForm.
@@ -20,7 +20,7 @@ namespace NWamp.Alchemy.Tester
 		{
 			InitializeComponent();
 			
-			FHost = new AlchemyWampHost(IPAddress.Any, 9000);
+			FHost = new SuperWebSocketWampHost(IPAddress.Any, 9000);
             
             FHost.RegisterFunction("http://localhost/calc#add", (double x, double y) => x + y);
 
